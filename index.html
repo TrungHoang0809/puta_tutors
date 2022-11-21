@@ -410,81 +410,124 @@
                         </div>
                     </div>
                 </div>
-                <form class="form-wrapper">
+                <form method="post" class="form-wrapper register-form">
                     <div class="row gx-5">
                         <div class="col-xxl-6 separate-line">
                             <div class="form-group">
-                                <label for="">Tỉnh/Thành dạy: *</label>
-                                <input type="text" name="provine">
+                                <div class="group">
+                                    <label for="">Tỉnh/Thành dạy: *</label>
+                                    <input type="text" name="provine" rules="province_require">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Họ và Tên: *</label>
-                                <input type="text" name="fullname">
+                                <div class="group">
+                                    <label for="">Họ và Tên: *</label>
+                                    <input type="text" name="fullname" rules="name_required">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Ngày sinh: *</label>
-                                <input type="text" name="date_of_birth">
+                                <div class="group">
+                                    <label for="">Ngày sinh: *</label>
+                                    <input type="text" name="date_of_birth" rules="date_required">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Nguyên quán: *</label>
-                                <input type="text" name="place_of_origin">
+                                <div class="group">
+                                    <label for="">Nguyên quán: *</label>
+                                    <input type="text" name="place_of_origin" rules="place_required">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Địa chỉ liên hệ: *</label>
-                                <input type="text" name="address">
+                                <div class="group">
+                                    <label for="">Địa chỉ liên hệ: *</label>
+                                    <input type="text" name="address" rules="address_required">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Email: *</label>
-                                <input type="text" name="email">
+                                <div class="group">
+                                    <label for="">Email: *</label>
+                                    <input type="text" name="email" rules="email_required|email|ext_email">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Số điện thoại: *</label>
-                                <input type="text" name="phone">
+                                <div class="group">
+                                    <label for="">Số điện thoại: *</label>
+                                    <input type="text" name="phone" rules="phone_required|phone|phone_number">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
                         </div>
 
                         <div class="col-xxl-6">
                             <div class="form-group choose-file">
-                                <label for="">Ảnh CCCD mặt trước: *</label>
-                                <input type="file" name="cccd_before" hidden>
-                                <input type="text" name="img" placeholder="Chọn file">
+                                <div class="group">
+                                    <label for="">Ảnh CCCD mặt trước: *</label>
+                                    <input type="file" name="cccd_before" hidden>
+                                    <input type="text" rules="img_required" name="img" placeholder="Chọn file">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group choose-file">
-                                <label for="">Ảnh CCCD mặt sau: *</label>
-                                <input type="file" name="cccd_after" hidden>
-                                <input type="text" name="img" placeholder="Chọn file">
+                                <div class="group">
+                                    <label for="">Ảnh CCCD mặt sau: *</label>
+                                    <input type="file" name="cccd_after" hidden>
+                                    <input type="text" rules="img_required" name="img" placeholder="Chọn file">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group choose-file">
-                                <label for="">Ảnh bằng cấp: *</label>
-                                <input type="file" name="degree_img" hidden>
-                                <input type="text" name="img" placeholder="Chọn file">
+                                <div class="group">
+                                    <label for="">Ảnh bằng cấp: *</label>
+                                    <input type="file" name="degree_img" hidden>
+                                    <input type="text" rules="img_required" name="img" placeholder="Chọn file">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Sinh viên, Giáo Viên: *</label>
-                                <input placeholder="Ví dụ: Đại học sư phạm" type="text" name="place_of_origin">
+                                <div class="group">
+                                    <label for="">Sinh viên, Giáo Viên: *</label>
+                                    <input placeholder="Ví dụ: Đại học sư phạm" type="text" rules="university"
+                                        name="place_of_origin">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Nghành học: *</label>
-                                <input type="text" name="address">
+                                <div class="group">
+                                    <label for="">Nghành học: *</label>
+                                    <input type="text" name="career" rules="career">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Trình độ: *</label>
-                                <input type="text" name="email" placeholder="Ví dụ: Đại học sư phạm">
+                                <div class="group">
+                                    <label for="">Trình độ: *</label>
+                                    <input type="text" name="deegree" rules="deegree"
+                                        placeholder="Ví dụ: Đại học sư phạm">
+                                </div>
+                                <span class="form-message"></span>
                             </div>
 
                             <div class="form-submit">
-                                <button>Đăng Ký Làm Gia Sư Ngay</button>
+                                <button>
+                                    <span>Đăng Ký Làm Gia Sư Ngay</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -670,6 +713,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+    
+    <!-- Validate Form -->
+    <script src="./validation.js"></script>
+    <script>
+        Validator(".register-form", {
+            // onSubmit: function (data) {
+            //     console.log(data);
+            // }
+        });
+    </script>
 
     <!-- main js -->
     <script src="./main.js"></script>

@@ -182,7 +182,7 @@ html {
     width: 180px;
     height: 50px;
     background-color: #b1c839;
-    border-radius: 20px;
+    border-radius: 26px;
     transform: translate(-50%);
     position: relative;
     left: 50%;
@@ -194,18 +194,18 @@ html {
 .header .header-main-button::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #c3e612;
-    width: 100%;
-    height: 0;
-    border-radius: 20px;
+    width: 0;
+    height: 100%;
+    border-radius: 26px;
     transition: all .25s linear;
 }
 
-.header .header-main-button:hover::after{
-    height: 100%;
+.header .header-main-button:hover::after {
+    width: 100%;
 }
 
 .header .header-main-button a {
@@ -272,6 +272,7 @@ html {
 .current-classes .current-classes-img {}
 
 .total-classes {
+    padding-bottom: 48px;
     margin-top: 48px;
     margin-left: -12px;
     margin-right: -12px;
@@ -368,7 +369,15 @@ html {
     display: flex;
     margin-bottom: 16px;
     align-items: center;
+    flex-direction: column;
+}
+
+.form-wrapper .form-group .group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 .form-wrapper label {
@@ -383,7 +392,7 @@ html {
 .form-wrapper input {
     flex: 2;
     border-radius: 20px;
-    height: 40px;
+    height: 44px;
     border: 1px solid rgba(178, 173, 173, .28);
     padding: 4px 20px
 }
@@ -403,34 +412,54 @@ html {
     text-align: right;
 }
 
+.form-wrapper .form-message {
+    color: #f33a58;
+    font-style: italic;
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+    margin-right: 30px;
+    margin-top: 4px;
+}
+
+.form-group.invalid input {
+    border-color: #f33a58;
+}
+
 .form-wrapper .form-submit button {
     width: 100%;
     font-family: var(--primary-font);
     background-color: #b2c934;
-    height: 40px;
-    line-height: 40px;
+    height: 44px;
+    line-height: 44px;
     border-radius: 20px;
     border: none;
     outline: none;
     font-weight: bold;
-    position: relative;
     text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.form-wrapper .form-submit button span {
+    position: relative;
+    z-index: 7;
 }
 
 .form-wrapper .form-submit button::after {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%);
     width: 0%;
     height: 100%;
-    background-color: #9eaf3b;
+    background-color: #bcd919;
     border-radius: 20px;
-    z-index: -1;
     transition: all .25s linear;
 }
 
-.form-wrapper .form-submit button:hover button::after {
+.form-wrapper .form-submit button:hover::after {
     width: 100%;
 }
 
@@ -533,7 +562,7 @@ html {
     margin-bottom: 30px;
 }
 
-.footer .footer-contact .online .right{
+.footer .footer-contact .online .right {
     margin: 0 10px;
 }
 
@@ -645,4 +674,8 @@ html {
 
 .footer-bottom .footer-bottom-content a:hover {
     opacity: .7;
+}
+
+.invalid {
+    border-color: #f33a58;
 }
