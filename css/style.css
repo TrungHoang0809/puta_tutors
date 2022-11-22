@@ -42,32 +42,63 @@ h6 {
 
 @font-face {
     font-family: "OpenSans Regular";
-    src: url("./fonts/OpenSans/OpenSans-Regular.ttf");
+    src: url("../fonts/OpenSans/OpenSans-Regular.ttf");
 }
 
 @font-face {
     font-family: "OpenSans Bold";
-    src: url("./fonts/OpenSans/OpenSans-Bold.ttf");
+    src: url("../fonts/OpenSans/OpenSans-Bold.ttf");
 }
 
 @font-face {
     font-family: "OpenSans Light";
-    src: url("./fonts/OpenSans/OpenSans-Light.ttf");
+    src: url("../fonts/OpenSans/OpenSans-Light.ttf");
 }
 
 @font-face {
     font-family: "OpenSans Medium";
-    src: url("./fonts/OpenSans/OpenSans-Medium.ttf");
+    src: url("../fonts/OpenSans/OpenSans-Medium.ttf");
 }
 
 @font-face {
     font-family: "Poppins Bold";
-    src: url("./fonts/OpenSans/OpenSans-Bold.ttf");
+    src: url("../fonts/OpenSans/OpenSans-Bold.ttf");
 }
 
 @font-face {
     font-family: "Poppins Light";
-    src: url("./fonts/Poppins/Poppins-Light.ttf");
+    src: url("../fonts/Poppins/Poppins-Light.ttf");
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes menuFadeIn {
+    from {
+        opacity: 0;
+        left: -400px;
+    }
+    to{
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes menuFadeOut {
+    from{
+        opacity: 1;
+        left: 0;
+    }
+    to{
+        opacity: 0;
+        left: -400px;
+    }
 }
 
 :root {
@@ -88,15 +119,54 @@ html {
 
 .header {
     height: 600px;
-    background-image: url(./images/header-bc-3.png);
+    /* background-image: url(./images/header-bc-3.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     color: white;
+    position: relative;
+}
+
+
+
+.header .list-background{
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.header .item-background {
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* .header .list-background .item-background {
+    height: 100%;
+    width: 100%;
+} */
+
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #000;
+    opacity: .3;
 }
 
 .header-top {
     padding-top: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .header-top .wrapper {
@@ -138,15 +208,26 @@ html {
     display: flex;
     list-style: none;
     gap: 0 20px;
-
 }
 
-.header-top .menu .item-menu {}
+.header .mobile-menu-icon {
+    display: none;       
+}
+
+.header .mobile-menu {
+    display: none;
+}
 
 .header-top .menu .item-link {
     text-decoration: none;
     color: white;
     font-family: var(--primary-font);
+    transition: all .25s linear;
+}
+
+.header-top .item-link:hover {
+    color: #b2c934;
+    /* font-weight: bold; */
 }
 
 .header .line {
@@ -157,6 +238,8 @@ html {
 
 .header .header-main {
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .header .header-main-container {
@@ -678,4 +761,77 @@ html {
 
 .invalid {
     border-color: #f33a58;
+}
+
+/* ---sub page--- */
+.sub-header {
+    height: 104px;
+    background-color: #b2c934;
+}
+
+.payment .section-heading {
+    width: 400px;
+}
+
+.payment-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.payment .payment-info {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* sub page */
+.list-post {
+    font-family: var(--primary-font);
+}
+
+.list_post .section-heading {
+    width: 265px;
+}
+
+.list_post .section-header{
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.post-content{
+    padding-bottom: 48px;
+}
+
+.post-content img {
+    height: 300px;
+    width: auto;
+}
+
+.post-content .post-content .post-header{
+    font-family: var(--bold-font);
+}
+
+.post-content .post-content .post-desc{
+    font-family: var(--primary-font);
+    line-height: 2;
+}
+
+/* post detail */
+.post-detail-content {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.post-detail-content .post-header {
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.post-detail-content img {
+    height: 400px;
+    width: auto;
+    margin: 0 auto 40px;
 }

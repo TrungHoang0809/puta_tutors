@@ -1,0 +1,330 @@
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+    .header-top .menu {
+        gap: 0 10px;
+        padding: 0;
+    }
+
+    .header .header-main-container {
+        margin-top: 124px;
+    }
+
+    .footer .class-category {
+        padding-top: 12px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer .payment {
+        padding-top: 12px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer .category-header::after,
+    .footer .payment-header::after {
+        width: 30%;
+    }
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+    /* header */
+    .header-top .header-top-heading {
+        font-size: 20px;
+    }
+
+    .header-top .header-top-desc {
+        font-size: 16px;
+    }
+
+    .header-top .menu .item-menu {
+        font-size: 14px;
+    }
+
+    /* Classes */
+    .section-header .section-heading {
+        width: 320px;
+    }
+
+    .total-classes .class {
+        padding: 40px 12px 24px 12px;
+    }
+
+    /* Form */
+    .register-form .section-header .section-heading {
+        width: 400px;
+    }
+
+    /* post */
+    .post .section-header .section-heading {
+        width: 300px;
+    }
+
+    .post .post-img {
+        height: 200px;
+    }
+
+    /* Footer */
+    .footer .footer-body {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+}
+
+/* `md` applies to small devices (landscape phones, less than 992px) */
+@media (max-width: 991.98px) {
+    .header {
+        position: relative;
+        height: 100vh;
+    }
+
+    .header .item-background {
+        height: 100vh;
+    }
+
+    .header .small-heading {
+        font-size: 30px;
+    }
+
+    .header .big-heading {
+        font-size: 39px;
+    }
+
+    .header .header-main-desc {
+        font-size: 18px;
+    }
+
+    .header .header-menu {
+        display: none;
+    }
+
+    .header .mobile-menu-icon {
+        display: block;
+        text-align: right;
+    }
+
+    .header .mobile-menu-icon i {
+        font-size: 40px;
+        margin-top: 14px;
+        transition: all .25s linear;
+        cursor: pointer;
+    }
+
+    .header .mobile-menu-icon:hover i {
+        opacity: .5;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 400px;
+        background-color: #0a2747;
+        height: 100%;
+        z-index: 5;
+        display: none;
+        /* animation: menuFadeIn .5s ease; */
+        padding: 10px 10px 10px 50px;
+
+    }
+
+    .mobile-menu .list-mobile-menu {
+        padding: 0;
+        list-style-type: none;
+        margin-top: 130px;
+    }
+
+    .mobile-menu .list-mobile-menu li {
+        position: relative;
+    }
+
+    .mobile-menu .list-mobile-menu li+li {
+        margin-top: 60px;
+    }
+
+    .mobile-menu .list-mobile-menu li::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        border-top: 1px solid #b2c934;
+        width: 100%;
+    }
+
+    .mobile-menu .list-mobile-menu a {
+        font-family: var(--primary-font);
+        font-size: 22px;
+        text-decoration: none;
+        color: #fff;
+        transition: all .25s linear;
+    }
+
+    .mobile-menu a:hover {
+        margin-left: 10px;
+    }
+
+    .mobile-menu .mobile-menu-header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .mobile-menu .mobile-menu-header i {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        font-size: 42px;
+        padding: 12px;
+        transition: all .25s linear;
+        cursor: pointer;
+    }
+
+    .mobile-menu .mobile-menu-header i:hover {
+        opacity: .5;
+    }
+
+    .mobile-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .27);
+        z-index: 4;
+        display: none;
+        animation: fadeIn .5s linear;
+    }
+
+    /* section header */
+    .section-header .section-heading {
+        font-size: 24px;
+    }
+
+    .register-form .section-heading {
+        width: 430px !important;
+    }
+
+    .separate-line {
+        position: unset;
+    }
+
+    .post .post-img {
+        height: 140px;
+    }
+
+    .post .post-desc {
+        font-size: 16px;
+    }
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .current-classes .current-classes-heading {
+        width: 400px;
+    }
+
+    .register-form .section-heading {
+        width: 590px !important;
+    }
+
+    .post-wrapper {
+        padding-bottom: 56px;
+    }
+
+    .post .post-img {
+        height: 300px;
+    }
+
+    .post .section-header .section-heading {
+        width: 360px;
+    }
+
+    .footer-bottom .footer-bottom-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .payment-header::after {
+        width: 45%;
+    }
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 768px) */
+@media (max-width: 575.98px) {
+    .ml-18 {
+        margin-left: -18px;
+    }
+
+    .register-form {
+        overflow: hidden;
+    }
+
+    .post {
+        overflow: hidden;
+    }
+
+    .footer-bottom .design-by p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .ml-18 {
+        margin-left: -28px;
+    }
+
+    .header .header-top-left {
+        display: none;
+    }
+
+    .current-classes .current-classes-header {
+        padding: 48px 10px 0 10px;
+    }
+
+    .total-classes {
+        padding-bottom: 48px;
+        margin-top: 48px;
+        /* margin-left: -12px; */
+        /* margin-right: -12px; */
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .section-header .section-heading {
+        font-size: 20.6px;
+    }
+
+    .section-header .section-line {
+        margin-top: 16px;
+    }
+
+    .register-form,
+    .post-wrapper, .footer-contact, .footer .class-category, .footer .payment{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media (max-width: 376.98px) {
+    .mobile-menu {
+        width: 100%;
+    }
+
+    .form-wrapper label {
+        margin-right: 12px;
+    }
+    .total-classes {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .register-form,
+    .post-wrapper, .footer-contact, .footer .class-category, .footer .payment{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
